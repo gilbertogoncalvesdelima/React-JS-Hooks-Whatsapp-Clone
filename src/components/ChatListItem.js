@@ -9,7 +9,7 @@ import './ChatListItem.css'
       className= {`chatListItem ${active?'active':''}`}
       onClick={onClick}
       > {/*Esta div, vai pegar todo o item do chat */}
-       <img className="chatListItem--avatar" src={data.avatar} alt=""/> {/*Imagem */}
+       <img className="chatListItem--avatar" src={data.image} alt=""/> {/*Imagem */}
        <div className="chatListItem--lines">
          <div className="chatListItem--line">
           <div className="chatListItem--name">{data.title}</div>  
