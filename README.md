@@ -38,7 +38,7 @@ Yarn
 yarn add @material-ui/core
 ```
 
-## Para mais informação como imortar o icone
+## Para mais informação como importar o icone
 
 ```js
 https://mui.com/pt/components/icons/
