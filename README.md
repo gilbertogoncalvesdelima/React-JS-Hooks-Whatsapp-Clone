@@ -58,7 +58,7 @@ npm install emoji-picker-react
 
 ## Este projeto foi feito, com o professor do youtube
 
-02:03:48 até 4:53:36
+02:10:05 até 4:53:36
 
 ```js
 https://www.youtube.com/watch?v=BkX4niTo9Ow

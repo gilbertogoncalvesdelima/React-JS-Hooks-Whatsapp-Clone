@@ -12,6 +12,10 @@ import MicroIcon from '@material-ui/icons/Mic' // Microfone
 
 
 const ChatWindow = () => {
+
+  const handleEmojiClick = () => {
+  
+  }
  return (
   <div className="chatWindow">
       <div className="chatWindow--header"> 
@@ -40,9 +44,13 @@ const ChatWindow = () => {
 
     </div>
 
-    <div className="chatWindow--body">
-    <EmojiPicker />
-
+    <div className="chatWindow--emojiarea">
+    <EmojiPicker 
+    onEmojiClick={handleEmojiClick}
+    disableSearchBar
+    disableSkinTonePicker
+    />
+    
     </div>
 
 
