@@ -1,0 +1,77 @@
+.chatWindow {
+  display: flex; /* Toda a area*/
+  flex-direction: column; /*Um item abaixo do outro*/
+  height: 100%;
+}
+.chatWindow-header {
+  height: 60px;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between; /*Para jogar um item para esquerda e outro para a direita*/
+  align-items: center;
+}
+.chatWindow--headerinfo {
+  display: flex;
+  align-items: center; /* para ficar a foto o texto centralizado*/
+  cursor: pointer; /*Clicar para ver mais informações*/
+}
+.chatWindow--avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-left: 15px;
+  margin-right: 15px; /*Para empurrar o nome*/
+}
+.chatWindow--name {
+  font-size: 17px;
+  color: #000;
+}
+.chatWindow--headerbuttons {
+  display: flex;
+  align-items: center;
+  margin-right: 15px; /*Margem do lado direito*/
+}
+.chatWindow--btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.chatWindow--body {
+  flex: 1; /*Pegar todo o espaço*/
+  overflow-y: auto; /*Scrow do lado esquerdo*/
+  background-color: #e5ddd5;
+  background-size: cover;
+  background-position: center;
+  background-image: url("https://res.cloudinary.com/drimg72d1/image/upload/v1632664409/fundo.png");
+}
+.chatWindow--footer {
+  height: 62px;
+  display: flex;
+  align-items: center;
+}
+.chatWindow--pre {
+  display: flex; /*Para um icone ficar do lado do outro*/
+  margin: 0 15px; /*0, em cima em baixo, 15px, lado esquerdo e lado direito*/
+}
+.chatWindow--inputarea {
+  flex: 1; /*Pegar toda a area disponível*/
+}
+.chatWindow--input {
+  width: 100%;
+  height: 40px;
+  border: 0;
+  outline: 0;
+  background-color: #fff;
+  border-radius: 20px;
+  font-size: 15px;
+  color: #4a4a4a;
+  padding-left: 15px;
+}
+.chatWindow--pos {
+  display: flex; /*Para um icone ficar do lado do outro*/
+  margin: 0 15px; /*0, em cima em baixo, 15px, lado esquerdo e lado direito*/
+}
