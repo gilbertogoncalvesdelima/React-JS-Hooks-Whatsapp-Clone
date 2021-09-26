@@ -1,0 +1,64 @@
+.chatListItem {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  height: 70px; /*CAda chat, vai ter 70px de altura*/
+}
+/*Quando eu passar o mouse em cima da conversa toda, vai mudar a cor*/
+.chatListItem:hover {
+  background-color: #f5f5f5;
+}
+.chatListItem.active {
+  background-color: #ebebeb;
+}
+.chatListItem--avatar {
+  /*Imagem avatar*/
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-left: 15px; /*Para não ficar colada na lateral*/
+}
+.chatListItem--lines {
+  flex: 1; /*Pegar todo o restante do espaço disponível*/
+  height: 100%; /*Pegar toda a area disponivel, altura*/
+  display: flex;
+  flex-direction: column; /*Para ficar um item abaixo do outro*/
+  justify-content: center; /*Alinhando o nome no meio*/
+  border-bottom: 1px solid #eee; /*Borda do botão*/
+  padding-right: 15px; /*Espaço do lado direito*/
+  margin-left: 15px; /*Leva tudo incluindo a borda*/
+  /*Arrumando, depois que o texto passar aparecer ...*/
+  /*Continuação deste aqui .chatListItem--lastMsg p */
+  flex-wrap: wrap;
+  min-width: 0;
+}
+.chatListItem--line {
+  display: flex; /*Para ficar um item de baixo do outro*/
+  justify-content: space-between; /*Jogar o nome do lado esquerdo, a hora do lado direito*/
+  align-items: center; /*Centralizar verticalmente*/
+  width: 100%; /*Pegar toda a area*/
+}
+.chatListItem--name {
+  /*Nome*/
+  font-size: 17px;
+  color: #000;
+}
+.chatListItem--date {
+  /*Data*/
+  font-size: 17px;
+  color: #999;
+}
+.chatListItem--lastMsg {
+  /*Mensagem*/
+  font-size: 14px;
+  color: #999;
+  display: flex;
+  width: 100%;
+}
+.chatListItem--lastMsg p {
+  /*Aqui vamos, fazer, que quando tiver, 3 linhas escrita, não ultrapasse a linha e coloque 3 pontos no final*/
+  overflow: hidden;
+  white-space: nowrap; /*Para a escrita não ir para a linha de baixo, ficar sempre na mesma linha*/
+  text-overflow: ellipsis;
+  margin: 0;
+}

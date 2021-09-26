@@ -1,38 +1,83 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: #d2dbdc;
+  margin: 0;
+  font-family: "Segoe UI", Helvetica Neue, Helvetica, Lucida Grande, Arial;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app-window {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100vh; /*Pegando a parte total*/
+  background-color: #ededed; /*Cor de Fundo*/
+}
+.sidebar {
+  width: 35%; /*Largura*/
+  max-width: 415px; /*Tamanho Máximo*/
+  display: flex;
+  flex-direction: column; /*Itens um abaixo do outro*/
+  border-right: 1px solid #ddd; /*Borda lateral*/
+}
+header {
+  height: 60px; /*Altura*/
+  display: flex; /*Para que um item, fique do lado do outro*/
+  justify-content: space-between; /*dos itens que tem dentro do header, vai ter espaços entre eles, ou seja joga um para um lado o outro para o outro e tera um espaço entre eles*/
+  align-items: center; /*Centraliza verticalmente, os botões e o icone*/
+  padding: 0 15px; /*0, encima e embaixo, 15px distancia entre os dois lados */
+}
+.header--avatar {
+  /*Imagem*/
+  width: 40px; /*Largura*/
+  height: 40px; /*Altura*/
+  border-radius: 20px; /*fique Redonda*/
+  cursor: pointer; /*Pode clicar neste item*/
+}
+.header--buttons {
+  display: flex; /*Fazer que fique um botão do lado do outro*/
+}
+.header--btn {
+  width: 40px; /*Largura*/
+  height: 40px; /*Altura*/
+  border-radius: 20px; /*Para ficar a area circular*/
+  display: flex;
+  justify-content: center; /*Centralizando o icone*/
+  align-items: center; /*Centralizando o icone*/
+  cursor: pointer; /*Para ficar o mouse*/
+}
+.search {
+  background-color: #f6f6f6;
+  border-bottom: 1px solid #eee; /*Linha que divide uma busca do restante do chat*/
+  padding: 5px 15px; /*5PX em cima e embaixo, 15px, nas laterais */
+}
+.search--input {
+  background-color: #fff; /*Cor de fundo*/
+  height: 40px; /*Altura padrão do campo de busca*/
+  border-radius: 20px; /*Ficar arredondado*/
+  display: flex; /*Ficar com o icone a esquerda e ficar com o restante do espaço*/
+  align-items: center; /*Centralizar verticalmente, o icone e o campo*/
+  padding: 0 10px; /*0, Em cima e embaixo, e 10px na leteral para não ficar colado na lateral na parte branca*/
+}
+.search--input input {
+  flex: 1; /* Pegar o espaço disponivel, pegar o espaço disponivel, icone vai pegar o espaço e o campo pega o restante do espaço disponivel*/
+  border: 0; /*não tem borda*/
+  outline: 0; /*Quando vx entra no campo fica ao redor uma borda*/
+  background-color: transparent; /*Se eu trocar a cor do search--imput, ele automaticamente fica transparente */
+  margin-left: 10px; /*Para ele descolar do icone*/
+}
+.chatlist {
+  flex: 1; /*Pegar todo o espaço restante disponível*/
+  background-color: #fff;
+  overflow-y: auto; /*Quando tiver bastante chat, vai conter uma barra de rolagem*/
+}
+.chatlist::-webkit-scrollbar {
+  /*Estilizando a barra de rolagem*/
+  width: 6px;
+  height: 6px;
+}
+.chatlist::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.contetarea {
+  flex: 1; /*Selecionando toda a area*/
 }
