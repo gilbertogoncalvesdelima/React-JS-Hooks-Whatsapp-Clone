@@ -39,6 +39,14 @@ const ChatWindow = () => {
     <div className="chatWindow--body"> 
 
     </div>
+
+    <div className="chatWindow--body">
+    <EmojiPicker />
+
+    </div>
+
+
+
     <div className="chatWindow--footer"> 
 
     <div className="chatWindow--pre"> 
