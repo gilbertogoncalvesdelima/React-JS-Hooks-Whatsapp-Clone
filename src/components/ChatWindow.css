@@ -39,6 +39,7 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  overflow: hidden; /*Escondendo o x*/
 }
 .chatWindow--body {
   flex: 1; /*Pegar todo o espaço*/

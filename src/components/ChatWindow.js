@@ -1,4 +1,4 @@
-import React from "react" 
+import React, { useState } from "react" 
 import EmojiPicker from 'emoji-picker-react'; // Importando os emoji
 import './ChatWindow.css'
 
@@ -13,9 +13,21 @@ import MicroIcon from '@material-ui/icons/Mic' // Microfone
 
 const ChatWindow = () => {
 
+  const [emojiOpen, setEmojiOpen] = useState(false);
+
   const handleEmojiClick = () => {
   
   }
+
+  const handleOpenEmoji = () => {
+  setEmojiOpen(true);
+  }
+  const handleCloseEmoji = () => {
+    setEmojiOpen(false);
+    }
+
+ 
+
  return (
   <div className="chatWindow">
       <div className="chatWindow--header"> 
@@ -44,7 +56,8 @@ const ChatWindow = () => {
 
     </div>
 
-    <div className="chatWindow--emojiarea">
+    <div className="chatWindow--emojiarea" 
+    style={{height: emojiOpen ? '200px' : '0px'}}>
     <EmojiPicker 
     onEmojiClick={handleEmojiClick}
     disableSearchBar
@@ -59,15 +72,21 @@ const ChatWindow = () => {
 
     <div className="chatWindow--pre"> 
    
-    <div className="chatWindow--btn">
-    <InsertEmoticonIcon style={{color: '#919191'}} />
+    <div 
+    className="chatWindow--btn"
+    onClick={handleCloseEmoji}
+    style={{width: emojiOpen? 40:0}}
+    >
+    <CloseIcon style={{color: '#919191'}} />
     </div>
 
-    <div className="chatWindow--btn">
+    <div className="chatWindow--btn"
+    onClick={handleOpenEmoji}
+    >
     <InsertEmoticonIcon style={{color: '#919191'}} />
     </div>
+    
     </div>
-
     <div className="chatWindow--inputarea">
       <input 
       className="chatWindow--input" 
